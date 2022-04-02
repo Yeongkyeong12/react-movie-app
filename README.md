@@ -15,7 +15,6 @@
 
 ## 보완할 점
 
-- [ ] css => sass로 변경하기
 - [ ] API KEY 노출되지 않도록 하기 (.env, netlify의 경우 함수 활용)
 - [ ] 배포링크 추가하기
 - [ ] intersection observer 추가하기(무한 스크롤)
