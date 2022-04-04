@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/react-movie-app/static/css/main.d0c60f32.css",
-    "main.js": "/react-movie-app/static/js/main.404c7d5a.js",
-    "index.html": "/react-movie-app/index.html",
-    "static/media/search.svg": "/react-movie-app/static/media/search.8ff5426bc87a3f731164f42e41b7144b.svg",
-    "main.d0c60f32.css.map": "/react-movie-app/static/css/main.d0c60f32.css.map",
-    "main.404c7d5a.js.map": "/react-movie-app/static/js/main.404c7d5a.js.map"
+    "main.css": "https://yeongkyeong12.github.io/react-movie-app/static/css/main.d0c60f32.css",
+    "main.js": "https://yeongkyeong12.github.io/react-movie-app/static/js/main.5f3c273d.js",
+    "index.html": "https://yeongkyeong12.github.io/react-movie-app/index.html",
+    "static/media/search.svg": "https://yeongkyeong12.github.io/react-movie-app/static/media/search.8ff5426bc87a3f731164f42e41b7144b.svg",
+    "main.d0c60f32.css.map": "https://yeongkyeong12.github.io/react-movie-app/static/css/main.d0c60f32.css.map",
+    "main.5f3c273d.js.map": "https://yeongkyeong12.github.io/react-movie-app/static/js/main.5f3c273d.js.map"
   },
   "entrypoints": [
     "static/css/main.d0c60f32.css",
-    "static/js/main.404c7d5a.js"
+    "static/js/main.5f3c273d.js"
   ]
 }
