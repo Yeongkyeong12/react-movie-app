@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import MovieCard from "./MovieCard";
+import MovieCard from "./components/MovieCard";
 import "./style.css";
 import SearchIcon from "./search.svg";
 
@@ -9,12 +9,12 @@ const API_URL = `http://www.omdbapi.com?apikey=${API_KEY}`;
 export default function App() {
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-  // const [Loading, setLoading] = useState()
 
   const searchMovies = async (title) => {
-    const response = await fetch(`${API_URL}&s=${title}`);
+    const response = await fetch(`${API_URL}&s=${title}&p=3`);
     const data = await response.json();
 
+    console.log(data.Search);
     setMovies(data.Search);
   };
 
@@ -30,7 +30,6 @@ export default function App() {
   return (
     <div className="app">
       <h1>MovieWorld</h1>
-
       <div className="search">
         <input
           placeholder="Search movies..!"
@@ -53,7 +52,7 @@ export default function App() {
         </div>
       ) : (
         <div className="empty">
-          <h2>검색 결과가 없습니다.</h2>
+          <h2>검색결과가 없습니다.</h2>
         </div>
       )}
     </div>
