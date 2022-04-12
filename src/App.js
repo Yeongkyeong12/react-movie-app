@@ -9,13 +9,22 @@ const API_URL = `http://www.omdbapi.com?apikey=${API_KEY}`;
 export default function App() {
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  // const [Loading, setLoading] = useState()
 
   const searchMovies = async (title) => {
     const response = await fetch(`${API_URL}&s=${title}`);
     const data = await response.json();
 
+    console.log(data.Search);
     setMovies(data.Search);
   };
+
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      searchMovies(searchTerm);
+    }
+  };
+
   useEffect(() => {
     searchMovies("music");
   }, []);
@@ -28,6 +37,7 @@ export default function App() {
           placeholder="Search movies..!"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
+          onKeyPress={handleKeyPress}
         />
         <img
           src={SearchIcon}
@@ -39,12 +49,12 @@ export default function App() {
       {movies.length > 0 ? (
         <div className="container">
           {movies.map((movie) => (
-            <MovieCard movie={movie} />
+            <MovieCard movie={movie} key={movie.imdbID} />
           ))}
         </div>
       ) : (
         <div className="empty">
-          <h2>No results found</h2>
+          <h2>검색 결과가 없습니다.</h2>
         </div>
       )}
     </div>
