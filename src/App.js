@@ -11,7 +11,7 @@ export default function App() {
   const [searchTerm, setSearchTerm] = useState("");
 
   const searchMovies = async (title) => {
-    const response = await fetch(`${API_URL}&s=${title}&p=3`);
+    const response = await fetch(`${API_URL}&s=${title}`);
     const data = await response.json();
 
     console.log(data.Search);
@@ -30,6 +30,7 @@ export default function App() {
   return (
     <div className="app">
       <h1>MovieWorld</h1>
+
       <div className="search">
         <input
           placeholder="Search movies..!"
